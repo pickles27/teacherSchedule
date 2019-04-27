@@ -4,7 +4,7 @@ var AddClass = (props) => {
 	return (
 		<div className="addClassComponent">
 			<h3>
-				Add Class Name
+				Add Class
 			</h3>
 			<p>
 				Please give each class a unique name, limit of 100 characters.
