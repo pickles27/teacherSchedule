@@ -1,0 +1,25 @@
+/*Landing Page*/
+
+/*Config Page Layout
+*/
+.addAndListClassSection {
+	display: flex;
+	flex-direction: row;
+}
+
+.addClassComponent {
+	flex: 1;
+}
+
+.classListComponent {
+	flex: 1;
+}
+
+/*Week Component*/
+.weekComponent {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+/*Day Component*/
