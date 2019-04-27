@@ -12,8 +12,8 @@ var AddClass = (props) => {
 			<p>
 				For example: "9th Grade Chemistry" or "Physics Grade 12"
 			</p>
-			<input type="text" onChange={props.onInputTextChange} />
-			<button onSubmit={props.submitNewClass}>Submit New Class</button>
+			<input type="text" onChange={props.onInputTextChange} value={props.inputText}/>
+			<button onClick={props.submitNewClass}>Submit New Class</button>
 		</div>
 	);
 }

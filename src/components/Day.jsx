@@ -15,7 +15,8 @@ class Day extends React.Component {
 
 	componentDidMount() {
 		this.setState({
-			dayName: this.props.day
+			dayName: this.props.day,
+			dayClasses: this.props.dayClasses
 		});
 	}
 
