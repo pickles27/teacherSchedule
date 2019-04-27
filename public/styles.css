@@ -1,4 +1,10 @@
+body {
+	font-family: Helvetica, Arial, sans-serif;
+}
 /*Landing Page*/
+.landingPageComponent {
+	text-align: center;
+}
 
 /*Config Page Layout
 */
@@ -9,10 +15,16 @@
 
 .addClassComponent {
 	flex: 1;
+	border: 1px solid black;
+	margin: 1em;
+	padding: 1em;
 }
 
 .classListComponent {
 	flex: 1;
+	border: 1px solid black;
+	margin: 1em;
+	padding: 1em;
 }
 
 /*Week Component*/
@@ -23,3 +35,20 @@
 }
 
 /*Day Component*/
+.dayComponent {
+	text-align: center;
+	border-right: 1px solid black;
+	width: 20%;
+}
+
+.dayComponent:last-child {
+	border-right: 0px;
+}
+
+.dayComponent ul {
+	text-align: left;
+}
+
+.dayName {
+	font-weight: bold;
+}

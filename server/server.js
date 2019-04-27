@@ -39,7 +39,33 @@ app.get('/classList', (req, res) => {
   })
   .catch(error => {
     res.status(500).send(error);
-  })
+  });
 });
+
+app.post('/scheduleClass', (req, res) => {
+  var teacherId = req.body.teacherId;
+  var classId = req.body.classId;
+  var day = req.body.day;
+  var hour = req.body.hour;
+  var minute = req.body.minute;
+  db.addToSchedule(teacherId, classId, day, hour, minute)
+  .then(result => {
+    res.status(200).send(result.rows);
+  })
+  .catch(error => {
+    res.status(500).send(error);
+  });
+});
+
+app.get('/getSchedule', (req, res) => {
+  var teacherId = req.query.teacherId;
+  db.getSchedule(teacherId)
+  .then(result => {
+    res.status(200).send(result.rows);
+  })
+  .catch(error => {
+    res.status(500).send(error);
+  })
+})
 
 app.listen(port, () => console.log(`Listening on port ${port}.......`));

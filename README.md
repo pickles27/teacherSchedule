@@ -29,15 +29,23 @@ To setup the database:
 
 //-----------------------------
 
-Start server:
+Start servers:
 
 - Run 'npm start' to start the react dev server.
 - Run 'npm run server' to start the Express backend.
 
 //-----------------------------
 
+Start the app:
+
+- Open a browser and type localhost:3000
+
 //-----------------------------
-Stretch Goals:
+
+
+//-----------------------------
+
+Next steps:
 
 - Home page would include some sort of account creation, which would allow the app to be useful to different users.
 
@@ -49,3 +57,5 @@ Stretch Goals:
 - Other columns could be added to the tables in the database with more teacher info. For simplicity only teacherId and teacherName are included.
 
 - Add unique constraints in database for each teacher's class names, and input validation
+
+- Add notifications :)

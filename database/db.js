@@ -29,9 +29,23 @@ function getClassList(teacherId) {
   return client.query(query, values);
 }
 
+function addToSchedule(teacherId, classId, day, hour, minute) {
+  let query = "INSERT INTO schedule_entry (teacher_id, class_id, day, hour, minute) VALUES ($1, $2, $3, $4, $5) RETURNING class_id AS classid, day, hour, minute";
+  let values = [teacherId, classId, day, hour, minute];
+  return client.query(query, values);
+}
+
+function getSchedule(teacherId) {
+  let query = "SELECT id, teacher_id, class_id, day, hour, minute FROM schedule_entry WHERE teacher_id = $1";
+  let values = [teacherId];
+  return client.query(query, values);
+}
+
 module.exports = {
   getTeacherNameById,
   addNewClass,
-  getClassList
+  getClassList,
+  addToSchedule,
+  getSchedule
 }
 
